@@ -1,0 +1,295 @@
+﻿html
+{
+	overflow: -moz-scrollbars-vertical;
+	overflow-y: scroll;
+}
+body
+{
+	background: #153D51;
+	font-family: Helvetica;
+	color: White;
+	line-height: 20px;
+}
+a
+{
+	text-decoration: none;
+}
+b, strong
+{
+	font-weight: bold;
+}
+i, em
+{
+	font-style: italic;
+}
+
+/**** CUSTOMIZED 3C LAYOUT - begin ****/
+#fixed
+{
+	box-shadow: 2px 2px 20px #000;
+	-moz-box-shadow: 2px 2px 20px #000;
+	-webkit-box-shadow: 2px 2px 20px #000;
+	height: auto;
+	width: 980px;
+	background: #561010 no-repeat url("../images/background980.jpg");
+}
+#container
+{
+	display: inline;
+}
+#header
+{
+	height: 220px;
+	padding: 0px;
+	border-bottom: 4px solid #fff100;
+}
+#left-sidebar
+{
+	width: 165px;
+	margin: 25px;
+	margin-right: 0;
+	padding: 0;
+	font-size: 0.8em;
+}
+#content
+{
+	margin: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-image: url("../images/backgrounds/beige75.png");
+	background-repeat: repeat;
+	color: #000;
+	overflow: auto;
+}
+#right-sidebar
+{
+	width: 185px;
+	padding: 25px;
+}
+#footer-push
+{
+	height: 200px;
+}
+#footer
+{
+	background-image: url("../images/footer.png");
+	background-repeat: repeat-x;
+	border-top: 4px solid #db8d2a;
+	padding: 0;
+	height: 175px;
+}
+/**** CUSTOMIZED 3C LAYOUT - end ****/
+
+/**** HEADER styles - begin ****/
+.site_logo
+{
+	padding: 20px;
+	height: 175px;
+	float: left;
+}
+.flag
+{
+	margin: 20px 10px 20px 0;
+	float: right;
+}
+.site_photo
+{
+	margin: 20px 20px 20px 0;
+	border: #db8d2a solid 2px;
+	float: right;
+}
+/**** HEADER styles - end ****/
+
+/**** LEFT styles - begin ****/
+.rounded
+{
+	width: 140px;
+	margin: 0 0 25px 0;
+	border: 2px solid #fff100;
+	background-color: #6d381b;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	box-shadow: 2px 2px 3px #000;
+	-moz-box-shadow: 2px 2px 3px #000;
+	-webkit-box-shadow: 2px 2px 3px #000;
+	font-size: 13px;
+	padding: 2px 4px;
+	outline: 0;
+	-webkit-appearance: none;
+}
+input.rounded, .rounded a:hover
+{
+	color: #bfa480;
+	font-weight: bold;
+	text-decoration: none;
+}
+.rounded a
+{
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 20px;
+	text-decoration: none;
+}
+
+/**** LEFT styles - end ****/
+
+/**** RIGHT styles - begin ****/
+
+
+
+/**** RIGHT styles - end ****/
+
+/**** FOOTER styles - begin ****/
+
+.clubs
+{
+	display: inline-block;
+	float: left;
+	width: 180px;
+	padding-left: 10px;
+}
+.clubs .club
+{
+	margin: 10px 0 6px 0;
+}
+.links
+{
+	position: relative;
+	top: 32px;
+	float: left;
+	width: 980px;
+	text-align: center;
+	min-height: 100px;
+}
+.links .link
+{
+	width: 195px;
+	height: 18px;
+	color: White;
+	display: inline-block;
+	font-size: 80%;
+}
+.social
+{
+	display: inline-block;
+	position: relative;
+	right: -190px;
+	top: 146px;
+}
+
+.sponsors
+{
+    background: #db8d2a;
+    height: 175px;
+}   
+
+.logotext
+{
+    font-size: 10px;
+    color: black;
+}
+
+.logo
+{
+    padding-top: 20px;
+    position: relative;
+    padding-right: 10px;
+    vertical-align: middle;
+    font-size: 20px;
+    color: Black;
+    max-width: 125px;
+    max-height: 100px;
+}
+
+/**** FOOTER styles - end ****/
+
+#content div
+{
+	font-size: 15px;
+}
+#content p
+{
+	padding: 0 0 10px 0;
+	font-size: 15px;
+}
+#content p img
+{
+	border: 1px solid #db8d2a;
+}
+#content a
+{
+	color: #000;
+	text-decoration: underline;
+}
+#content ul, #content ol
+{
+	padding-bottom: 10px;
+	color: #000;
+	font-size: 15px;
+}
+#content ul li
+{
+	margin-left: 20px;
+	list-style-position: outside;
+	list-style-type: disc;
+}
+#content ol li
+{
+	margin-left: 20px;
+	list-style-position: outside;
+	list-style-type: decimal;
+}
+#content pre
+{
+	font-family: Courier New;
+	background: #ccc;
+	margin: 10px;
+}
+#content address
+{
+	font-family: Times New Roman;
+	margin: 10px;
+}
+
+#content h1
+{
+	font-family: Times New Roman;
+	font-size: 41px;
+	color: #000;
+	line-height: 42px;
+	letter-spacing: -2px;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 25px;
+}
+#content h2
+{
+	font-family: Times New Roman;
+	font-size: 30px;
+	color: #000;
+	line-height: 30px;
+}
+#content h3
+{
+	font-family: Times New Roman;
+	font-size: 25px;
+	color: #000;
+	line-height: 25px;
+}
+#content h4
+{
+	font-size: 20px;
+	color: #000;
+}
+#content h5
+{
+	font-size: 16px;
+	color: #000;
+}
+#content h6
+{
+	font-size: 12px;
+	color: #000;
+}

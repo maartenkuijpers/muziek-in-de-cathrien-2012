@@ -1,0 +1,79 @@
+﻿html, body
+{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body
+{
+  text-align: center;
+}
+
+#fixed
+{
+  margin: 0 auto;
+  width: 950px; /* you can use px, em or % */
+  height: 100%;
+  text-align: left;
+}
+
+#container
+{
+  height: 100%;
+  height: auto !important;
+  min-height: 100%;
+  margin-bottom: -100px;
+  padding: 0 auto;
+}
+
+#header
+{
+  height: 100px;
+  border-bottom: 1px solid #000;
+  padding: 20px;
+}
+
+#body
+{
+	overflow: hidden;
+}
+
+/* IE6 Fix */
+* html div#body
+{
+  overflow: visible;
+}
+
+#content
+{
+  margin: 0px 300px 0px 300px;
+  padding: 20px;
+}
+
+#left-sidebar
+{
+  width: 260px;
+  float: left;
+  padding: 20px;
+}
+
+#right-sidebar
+{
+  width: 260px;
+  float: right;
+  padding: 20px;
+}
+
+#footer-push
+{
+  height: 100px;
+}
+
+#footer
+{
+  height: 100px;
+  background: #ba6f19;
+  border-top: 1px solid #000;
+  padding: 20px;
+}

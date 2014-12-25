@@ -1,0 +1,154 @@
+﻿/* All styles for a post are within the #content <div> */
+
+#content
+{
+}
+
+table, tr, td
+{
+	padding-right: 8px;
+	vertical-align: top;
+}
+
+h3
+{
+    margin-top: 20px;
+}
+
+#footerPage
+{
+	border-top: 2px solid white;
+	font-size: 0.7em;
+	font-style: italic;
+	color: #444;
+}
+
+/* styles used in php */
+small
+{
+	font-size: 0.7em;
+}
+small strong
+{
+	font-size: 1.0em;
+	font-weight: bold;
+}
+strong
+{
+	font-weight: bold;
+	color: #000;
+}
+.alignright
+{
+	float: right;
+	margin-left: 10px;
+}
+.alignleft
+{
+	float: left;
+	margin-right: 10px;
+}
+
+/* Comments */
+#commentform
+{
+}
+#commentform p
+{
+	padding: 0;
+	margin: 0;
+}
+.comments-template
+{
+	text-align: left;
+	border-top: 1px #000 solid;
+	padding-top: 5px;
+	margin-top: 10px;
+}
+.comments-template ol
+{
+	margin: 0;
+	padding: 0 0 15px;
+	list-style: none;
+}
+.comments-template ol li
+{
+	margin: 10px 0 0 0;
+	padding: 0;
+	color: #111;
+	background: #e8e8e8;
+	font-size: 10pt;
+}
+.comments-template h2, .comments-template h3
+{
+	font-family: tahoma,sans-serif;
+}
+.comments-template p.nocomments
+{
+	padding: 0;
+}
+.comments-template textarea
+{
+	font-family: tahoma,sans-serif;
+	font-size: 10pt;
+}
+.commentlist li.alt
+{
+	background: #e8e8ff;
+}
+.commentmetadata
+{
+	padding: 5px 10px 5px 10px;
+	font-size: 8pt;
+}
+.more_text
+{
+	color: #db8d2a;
+}
+/* End of comments */
+
+/* Entry - BEGIN */
+.entry
+{
+	border-bottom: 1px dashed #888;
+	padding-top: 0px;
+}
+
+.entry, #content .entry a
+{
+	font-style: italic;
+	text-decoration: none;
+	color: #000;
+}
+.entry .date
+{
+	float: left;
+	font-size: 12px;
+	color: #888;
+}
+/* Entry - END */
+
+/* MidC specific - BEGIN */
+#search
+{
+    background-image: url("../images/search-icon-17x17.png");
+    background-position: 135px 4px;
+    background-repeat: no-repeat;
+}
+#search .rounded
+{
+	width: 115px;
+}
+
+/* MidC specific - END */
+
+/* Overwrites: NextGen gallery plugin */
+.ngg-galleryoverview
+{
+	clear: none;
+}
+.slideshowlink
+{
+	display: none;
+}
+/* Overwrites - END */

@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<!----------------------------------------------------------------------------->
+	<link href="styles/reset.css" rel="stylesheet" type="text/css" />
+	<link href="styles/3c.css" rel="stylesheet" type="text/css" />
+	<link href="styles/site.css" rel="stylesheet" type="text/css" />
+	<!----------------------------------------------------------------------------->
+	<!-- jQuery 1.7.2 and 1.8.21 custom [Accordion] http://jqueryui.com/download -->
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+	<script type="text/javascript" src="js/slides.min.jquery.js"></script>
+	<script type="text/javascript">
+		$(function () {
+
+			// Accordion
+			$("#accordion").accordion({ header: "h3", autoHeight: false });
+
+			// Slides jQuery image slider [Standard] http://slidesjs.com/
+			$('#slides').slides({
+				crossfade: true,
+				pagination: true,
+				preload: true,
+				preloadImage: 'images/slides/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true
+			});
+
+		});
+	</script>
+	<link href="styles/accordion.css" rel="stylesheet" type="text/css" />
+	<link href="styles/slides.css" rel="stylesheet" type="text/css" />
+	<!----------------------------------------------------------------------------->
+	<!-- Google Calendar JSON: http://www.google.com/calendar/feeds/grasperk%40gmail.com/public/full?alt=json -->
+	<script type="text/javascript">
+		var months = new Array();
+		months[0] = new Array("januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december");
+		var previousMonth = 0;
+		var previousYear = 0;
+
+		$(document).ready(function () {
+			$.getJSON("http://www.google.com/calendar/feeds/grasperk%40gmail.com/public/full?alt=json-in-script&callback=?&orderby=starttime&max-results=15&singleevents=true&sortorder=ascending&futureevents=true", function (json) {
+				if (typeof json.feed.entry !== "undefined") {
+					$.each(json.feed.entry, function (i, event) {
+						var year = parseFloat(event.gd$when[0].startTime.substring(0, 4));
+						var month = parseFloat(event.gd$when[0].startTime.substring(5, 7));
+						var day = event.gd$when[0].startTime.substring(8, 10);
+
+						var htmlEvent;
+						htmlEvent = '<div class="agenda">';
+						htmlEvent += '<div class="event">';
+						if ((previousMonth != month) || (previousYear != year)) {
+							htmlEvent += '<div class="month">' + months[0][month - 1] + '&nbsp;' + year + '</div>';
+							previousYear = year;
+							previousMonth = month;
+						}
+						htmlEvent += '<div class="day">' + day + '</div>';
+						htmlEvent += '<div class="title"><a href="' + event.gd$where[0].valueString + '">' + event.title.$t + '</a></div>';
+						htmlEvent += '&nbsp;<div class="description">' + event.content.$t + '</div>';
+						htmlEvent += '</div>';
+						htmlEvent += '<div class="separator"></div>';
+						htmlEvent += '</div>';
+						$("#agenda").append(htmlEvent);
+					});
+				}
+				else
+					$("#agenda").append('<p>NO EVENTS</p>');
+			});
+		});
+	</script>
+	<!----------------------------------------------------------------------------->
+</head>
+<body>
+	<div id="fixed">
+		<div id="container">
+			<div id="header">
+				<img class="site_logo" src="images/logos/MIDC.png" alt="Muziek in de Cathrien" /> <img class="site_photo" src="images/header_cathrien.jpg"
+					alt="Stadskerk St. Cathrien" /> <a href="#"><img class="flag" src="images/flagDE.png" alt="Deutsch" /></a> <a href="#"><img
+						class="flag" src="images/flagFR.png" alt="Français" /></a> <a href="#"><img class="flag" src="images/flagGB.png" alt="English" /></a>
+				<a href="#"><img class="flag" src="images/flagNL.png" alt="Nederlands" /></a>
+			</div>
+			<div id="body">
+				<div id="left-sidebar">
+					<!-- ACCORDION MENU - begin -->
+					<div id="accordion">
+						<h3>Collegium Eindhoven</h3>
+						<div class="content">
+							<a href="#">Collegium Musicum</a> <a href="#">Collegium Instrumentale</a> <a href="#">Collegium Vocale</a>
+						</div>
+						<h3>Concerten</h3>
+						<div class="content">
+							<a href="#">Concertfoto's</a> <a href="#">Opnamen</a> <a href="#">Musici</a> <a href="#">Verslagen / Recensies</a>
+						</div>
+						<h3>Zakelijk</h3>
+						<div class="content">
+							<a href="#">Sponsors</a> <a href="#">Groepslessen</a>
+						</div>
+						<h3>Gastenboek</h3>
+						<div>
+						</div>
+						<h3>Sponsoren</h3>
+						<div class="content">
+							<a href="#">Zanglessen</a> <a href="#">Groepslessen</a>
+						</div>
+						<h3>Informatie</h3>
+						<div class="content">
+							<a href="#">Locatie & Route</a> <a href="#">Contact</a> <a href="#">CD's</a> <a href="#">Jeugd</a> <a href="#">Boekingen</a>
+						</div>
+						<h3>Contact</h3>
+						<div class="content">
+							<a href="#">Contact</a> <a href="#">Bezoeker</a> <a href="#">Uitvoerenden</a> <a href="#">Gastenboek</a>
+						</div>
+						<h3>Winkel</h3>
+						<div class="content">
+							<a href="#">CD's</a> <a href="#">Kaarten</a> <a href="#">Cadeaubonnen</a> <a href="#">Certificaten</a>
+						</div>
+						<h3>Links</h3>
+						<div class="content">
+							<a href="#">Onze vrienden</a> <a href="#">Podia</a> <a href="#">Koren</a> <a href="#">Orkesten</a>
+						</div>
+					</div>
+					<!-- ACCORDION MENU - end -->
+					<div id="search">
+						<form action="#">
+						<input type="text" class="rounded" value="Zoeken &gt;&gt;" />
+						</form>
+					</div>
+					<div id="featured">
+						<a href="#" class="rounded">Winkel</a>
+					</div>
+				</div>
+				<div id="right-sidebar">
+					<div class="agenda">
+						<div class="heading">
+							Agenda</div>
+						<div class="separator">
+						</div>
+					</div>
+					<div id="agenda">
+						<!-- Google Calendar events are appended in here -->
+					</div>
+					<div class="agenda">
+						<a href="#" title="Toon resterende concerten in deze maand" class="link">&gt;&gt; meer juli</a> <a href="#" title="Download de jaaragenda 2012-2013 als PDF"
+							class="link">&gt;&gt; jaaragenda 2012-2013</a>
+					</div>
+				</div>
+				<div id="content">
+					<h1>Titel</h1>
+					<!------------------------------------------>
+					<div id="slider_container">
+						<div id="example">
+							<div id="slides">
+								<div class="slides_container">
+									<a href="#" title="tooltip slide 1"><img src="images/slide1.jpg" width="570" height="270" alt="Slide 1"></a> <a href="#"
+										title="tooltip slide 2"><img src="images/slide2.jpg" width="570" height="270" alt="Slide 2"></a> <a href="#" title="tooltip slide 3">
+											<img src="images/slide3.jpg" width="570" height="270" alt="Slide 3"></a>
+								</div>
+								<a href="#" class="prev"><img src="images/slides/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a> <a href="#"
+									class="next"><img src="images/slides/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
+							</div>
+						</div>
+					</div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum diam a justo lobortis tincidunt. Vestibulum auctor,
+						est id vestibulum porta, odio quam lacinia ante, non ornare dui arcu et enim.
+					</p>
+					<p>
+						Donec gravida lorem id odio consequat accumsan. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+						mus. Cras metus est, hendrerit rutrum tempor eget, consectetur vel ante. Quisque vel aliquet quam.
+					</p>
+					<p>
+						Etiam et eros sit amet enim aliquam tempus. Integer euismod, velit accumsan dictum interdum, odio diam sollicitudin nisl,
+						in tempus elit nunc at mauris. Donec sagittis dolor vel nunc aliquet et interdum leo varius.
+					</p>
+					<a href="#" title="Toon meer informatie over dit concert" class="more_text">&gt;&gt; meer informatie</a>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="clubs">
+				<div class="club">
+					<a href="#"><img src="images/logos/CME_45px.png" alt="Collegium Musicum Eindhoven" /></a></div>
+				<div class="club">
+					<a href="#"><img src="images/logos/CIE_45px.png" alt="Collegium Instrumentale Eindhoven" /></a></div>
+				<div class="club">
+					<a href="#"><img src="images/logos/CVE_45px.png" alt="Collegium Vocale Eindhoven" /></a></div>
+			</div>
+			<div class="links">
+				<a href="#" class="link">Sitemap</a> <a href="#" class="link">Winkel</a> <a href="#" class="link">Links</a> <a href="#" class="link">
+					Home</a> <a href="#" class="link">Collgium Eindhoven</a> <a href="#" class="link">Zoeken</a> <a href="#" class="link">Agenda</a>
+				<a href="#" class="link">Contact</a> <a href="#" class="link">Login</a> <a href="#" class="link">Concerten</a> <a href="#"
+					class="link">Zakelijk</a> <a href="#" class="link">Copyright</a> <a href="#" class="link">Informatie</a> <a href="#" class="link">
+						Social</a> <a href="#" class="link">Disclaimer</a>
+			</div>
+			<div class="social">
+				<a href="#"><img src="images/icon_facebook.png" alt="Facebook" /></a> <a href="#"><img src="images/icon_linkedin.png" alt="Linked In" /></a>
+				<a href="#"><img src="images/icon_twitter.png" alt="Twitter" /></a> <a href="#"><img src="images/icon_youtube.png" alt="YouTube" /></a>
+				<a href="#"><img src="images/icon_flickr.png" alt="FlickR" /></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
