@@ -16,7 +16,6 @@
 			    <a target="_blank" href="http://www.muziekgebouweindhoven.nl/"><img class="logo" src="<?php echo get_stylesheet_directory_uri() ?>/images/logos/transMuziekgebouw.png" title="Muziekgebouw Eindhoven" alt="Muziekgebouw Eindhoven" /></a>
 			    <a target="_blank" href="http://www.eindhoven.nl/"><img class="logo" src="<?php echo get_stylesheet_directory_uri() ?>/images/logos/transEindhoven.png" title="Gemeente Eindhoven" alt="Gemeente Eindhoven" /></a>
 			    <a target="_blank" href="http://www.fondspodiumkunsten.nl/"><img class="logo" src="<?php echo get_stylesheet_directory_uri() ?>/images/logos/transFondsPodiumkunsten.png" title="Fonds Podiumkunsten" alt="Fonds Podiumkunsten" /></a>
-			    <img class="logo" src="<?php echo get_stylesheet_directory_uri() ?>/images/logos/transMignotEnDeBlock.png" title="Mignot en De Block" alt="Mignot en De Block" />
                 <img class="logo" src="<?php echo get_stylesheet_directory_uri() ?>/images/logos/transPhilipsBeiaardFonds.png" title="Philips Beiaard Fonds" alt="Philips Beiaard Fonds" />
 			</div>
             <div class="links">
