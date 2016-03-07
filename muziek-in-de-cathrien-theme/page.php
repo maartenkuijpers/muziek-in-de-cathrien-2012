@@ -15,9 +15,5 @@
 			Not Found
 		</div>
 	<?php endif; ?>
-
-	<div id="footerPage">
-	Toegevoegd op <?php the_date(); ?> om <?php the_time(); ?> door <?php the_author_meta(first_name) ?>.
-	</div>
 </div>
 <?php get_footer(); ?>
