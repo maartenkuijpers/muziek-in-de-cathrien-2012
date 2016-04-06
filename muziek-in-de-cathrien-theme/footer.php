@@ -12,7 +12,7 @@
             <div class="sponsors">
             <div class="logotext">Muziek in de Cathrien wordt mede mogelijk gemaakt door onze sponsoren:</div>
 			    <a target="_blank" href="http://www.rabobank.nl/particulieren/servicemenu/sponsoring/cultuursponsoring/"><img class="logo" src="<?php echo get_stylesheet_directory_uri() ?>/images/logos/transRabobank.png" title="Rabobank" alt="Rabobank" /></a>
-			    <a target="_blank" href="http://www.meesterdrukkers.nl/"><img class="logo" src="<?php echo get_stylesheet_directory_uri() ?>/images/logos/transMeesterDrukkers.png" title="Meesterdrukkers" alt="Meesterdrukkers" /></a>
+			    <a target="_blank" href="http://www.multicopy.nl/"><img class="logo" src="<?php echo get_stylesheet_directory_uri() ?>/images/logos/transMulticopy.png" title="Multicopy" alt="Multicopy" /></a>
 			    <a target="_blank" href="http://www.muziekgebouweindhoven.nl/"><img class="logo" src="<?php echo get_stylesheet_directory_uri() ?>/images/logos/transMuziekgebouw.png" title="Muziekgebouw Eindhoven" alt="Muziekgebouw Eindhoven" /></a>
                 <img class="logo" src="<?php echo get_stylesheet_directory_uri() ?>/images/logos/transPhilipsBeiaardFonds.png" title="Philips Beiaard Fonds" alt="Philips Beiaard Fonds" />
 			</div>
